@@ -31,12 +31,14 @@
 </body>
 
 <script>
-    function agregarDiv() {
 
-        $('body').append('<div class="container"><div class="children"></div></div>')
+    function agregarDiv(n) {
+        for(let i=0;i<n;i++){
+            $('body').append('<div class="container"><div class="children"></div></div>')
+        }
+       }
+    agregarDiv(7);
 
-    }
-    agregarDiv();
 </script>
 
 </html>
