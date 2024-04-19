@@ -10,10 +10,17 @@
     <title>Git rebase test</title>
 
     <style>
-        div {
+        .container {
             width: 10px;
             height: 10px;
             background-color: red;
+            margin: 1px;
+        }
+
+        .children {
+            width: 5px;
+            height: 5px;
+            background-color: blue;
             margin: 1px;
         }
     </style>
@@ -24,12 +31,15 @@
 </body>
 
 <script>
-    function agregarDiv() {
 
-        $('body').append('<div></div>')
 
-    }
-    agregarDiv();
+    function agregarDiv(n) {
+        for(let i=0;i<n;i++){
+            $('body').append('<div class="container"><div class="children"></div></div>')
+        }
+       }
+    agregarDiv(7);
+
 </script>
 
 </html>
